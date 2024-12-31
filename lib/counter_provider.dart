@@ -1,4 +1,12 @@
-// Simple state provider for primitive value
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+part 'counter_provider.g.dart';
 
-final counterProvider = StateProvider<int>((ref) => 0);
+@riverpod
+class Counter extends _$Counter {
+  @override
+  int build() => 0;
+
+  void increment() => state++;
+
+  void decrement() => state--;
+}

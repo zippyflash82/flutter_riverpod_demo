@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'counter_provider.dart';
 
 class CounterPage extends ConsumerWidget {
@@ -7,6 +7,7 @@ class CounterPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final counter = ref.watch(counterProvider.notifier);
     final count = ref.watch(counterProvider);
 
     return Scaffold(
@@ -29,12 +30,12 @@ class CounterPage extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () => ref.read(counterProvider.notifier).state++,
+                  onPressed: () => counter.increment(),
                   child: Icon(Icons.add),
                 ),
                 SizedBox(width: 16),
                 ElevatedButton(
-                  onPressed: () => ref.read(counterProvider.notifier).state--,
+                  onPressed: () => counter.decrement(),
                   child: Icon(Icons.remove),
                 )
               ],
