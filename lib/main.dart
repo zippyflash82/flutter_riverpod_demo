@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod_demo/ui/todo_page.dart';
+import 'package:flutter_riverpod_demo/ui/posts_page.dart';
+
 
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const TodoPage(),
+      home: const PostsPage(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
         useMaterial3: false

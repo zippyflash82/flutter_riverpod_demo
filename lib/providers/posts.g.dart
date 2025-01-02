@@ -1,25 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'todo_provider.dart';
+part of 'posts.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$toDoHash() => r'a72641f2d1b20bb724217719c941fc6aecbc1dbb';
+String _$postsHash() => r'7da2c7dcc4c48997a9de297d47d5f28c48896aeb';
 
-/// See also [ToDo].
-@ProviderFor(ToDo)
-final toDoProvider =
-    AutoDisposeNotifierProvider<ToDo, List<TodoModel>>.internal(
-  ToDo.new,
-  name: r'toDoProvider',
+/// See also [Posts].
+@ProviderFor(Posts)
+final postsProvider =
+    AutoDisposeAsyncNotifierProvider<Posts, List<PostModel>>.internal(
+  Posts.new,
+  name: r'postsProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$toDoHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$postsHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$ToDo = AutoDisposeNotifier<List<TodoModel>>;
+typedef _$Posts = AutoDisposeAsyncNotifier<List<PostModel>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
